@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solá Solá Studios, GmbH</title>
+  <link rel="stylesheet" href="https://use.typekit.net/qhi0kqh.css">
+  <style>
+    :root {
+      --bg: #f9f8f5;     /* page background */
+      --ink: #2c2c2c;    /* main text and dot */
+      --muted: #929290;  /* nav and secondary text */
+      --gutter: clamp(2.75rem, 5vw, 5rem);
+      --section-gap: clamp(1.5rem, 4vw, 3.5rem); /* space between header, text and images */
+
+      /* Cursor: two dots side by side (gap = one dot radius). Dark 50% opaque on the page, text color 100% opaque over links */
+      --dot-cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='12'%3E%3Ccircle cx='6' cy='6' r='6' fill='%232c2c2c' fill-opacity='0.5'/%3E%3Ccircle cx='24' cy='6' r='6' fill='%232c2c2c' fill-opacity='0.5'/%3E%3C/svg%3E") 15 6, auto;
+      --dot-cursor-link: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='12'%3E%3Ccircle cx='6' cy='6' r='6' fill='%232c2c2c' fill-opacity='1'/%3E%3Ccircle cx='24' cy='6' r='6' fill='%232c2c2c' fill-opacity='1'/%3E%3C/svg%3E") 15 6, auto;
+    }
+
+    /* Dot cursor on the page, full-strength dot over links */
+    html, body {
+      cursor: var(--dot-cursor);
+    }
+
+    a {
+      cursor: var(--dot-cursor-link);
+    }
+
+    /* Links: same color as the text, 50% lighter once visited */
+    a:link {
+      color: var(--ink);
+    }
+
+    a:visited {
+      color: var(--muted);
+    }
+
+    /* This applies Code Saver (Adobe Fonts) to all text on the page */
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "code-saver", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      line-height: 1.5;
+    }
+
+    /* Header: site name with dot on the left, navigation on the right */
+    .site-header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: baseline;
+      text-align: right;
+      padding: 2.25rem var(--gutter) 0;
+    }
+
+    .brand {
+      position: relative;
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    /* Content area: text left-aligned */
+    main {
+      margin: 0;
+      text-align: left;
+      padding: var(--section-gap) var(--gutter) 4rem;
+      box-sizing: border-box;
+    }
+
+    main p {
+      margin: 0 0 1.25rem;
+      font-weight: 400;
+      font-size: .8rem;
+      line-height: 1.15;
+    }
+
+    /* Space between the text and the images: double the header-to-text space.
+       (It is larger than the paragraph's bottom margin, so the two margins
+       collapse into exactly this value.) */
+    .person {
+      margin-top: calc(2 * var(--section-gap));
+    }
+
+    /* Studio statement and contacts: the same gap (one blank line plus paragraph spacing) before the next block */
+    main .statement,
+    main .contacts {
+      margin-bottom: calc(1.15em + 1.25rem);
+    }
+
+    /* Names in the main text: same size as the main text, bold */
+    main strong {
+      font-size: 1em;
+      font-weight: 700;
+    }
+
+    /* Images: centered horizontally on the page */
+    img {
+      display: block;
+      width: 30.8rem;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 1rem;
+    }
+
+    /* Each image sits in a figure the same width as the image */
+    figure {
+      width: 30.8rem;
+      max-width: 100%;
+      margin: 0 auto 1rem;
+    }
+
+    figure img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover; /* image fills the frame edge to edge, no empty space; edges are cropped */
+      margin: 0 0 .5rem;
+    }
+
+    figcaption {
+      text-align: left;
+      font-size: .6rem;
+      line-height: 1.15;
+    }
+
+
+    /* Desktop: three images across, each with its own caption beneath */
+    .person {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem 1.5rem;
+      align-items: start;
+    }
+
+    .person figure {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+    }
+
+    /* Mobile: all 12 images stay, one per row, in order 1 1 1 / 2 2 2 / 3 3 3 / 4 4 4.
+       Each image keeps its caption below. */
+    @media (max-width: 40rem) {
+      .person {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Two columns: image and text for each person */
+    .team {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    .team img {
+      width: 100%;
+    }
+
+    /* Footer: left-aligned with the header and main text */
+    .site-footer {
+      padding: 0 var(--gutter) 3rem;
+      text-align: left;
+      color: var(--ink);
+      font-size: .8rem;
+      line-height: 1.15;
+    }
+
+    .site-footer p {
+      margin: 0;
+    }
+
+    /* Stacks the columns on narrow screens */
+    @media (max-width: 40rem) {
+      .team {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      /* Mobile: images fill the text column */
+      img {
+        width: 100%;
+      }
+
+      /* Mobile: header lines never wrap; the text shrinks on very narrow screens */
+      .brand {
+        white-space: nowrap;
+        font-size: min(1.2rem, calc((100vw - 2 * var(--gutter)) / 12));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="brand">Solá Solá Studios<br>Industrial Design<br>8006 Zürich</h1>
+     </header>
+
+  <main>
+    <p class="statement"><strong>Resolving complex requirements with poetic simplicity.</strong></p>
+
+    <p class="contacts"><strong>Kyle Solá</strong>
+    <br>Co-Founder, Principal Industrial Designer
+    <br><a href="mailto:kyle@solasolastudios.com">kyle@solasolastudios.com</a>
+    <br><a href="http://www.instagram.com/solaequipment" target="_blank" rel="noopener">@solaequipment</a>
+    <br><a href="http://www.solasolastudios.com/kyle" target="_blank" rel="noopener">about</a>
+    <br>
+    <br><strong>Isabell Solá</strong>
+    <br>Co-Founder
+    <br>Current: Director of Footwear Design, Performance All Day, On AG
+    <br><a href="mailto:isabell@solasolastudios.com">isabell@solasolastudios.com</a>
+    <br><a href="http://www.solasolastudios.com/isabell" target="_blank" rel="noopener">about</a></p>
+
+    <p><strong>Select Clients</strong>
+    <br>Arc’teryx
+    <br>Atlas Crafts
+    <br>Black Yak
+    <br>District Vision
+    <br>District Vision + New Balance
+    <br>District Vision + Salomon
+    <br>Engelbert Strauss
+    <br>Intuition
+    <br>Kanton Graubunden
+    <br>Karakter
+    <br>Okro Gallery
+    <br>On
+    <br>Riedel
+    <br>Rollerblade
+    <br>Soeder
+    <br>Solá Equipment
+    <br>THEM Skates
+    <br>Veilance
+    <br>VIU
+    <br>Zig Zag Zurich
+    <br>Zuriga
+    <br>&amp;tradition</p>
+
+
+      <div class="person">
+        <figure>
+          <img src="images/012_2502_004_4-5.jpg" alt="DV NB 1080v15 1">
+          <figcaption>District Vision New Balance 1080v15<br>F26 footwear collaboration</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2502_009_4-5.jpg" alt="DV NB 1080v15 2">
+          <figcaption>District Vision New Balance 1080v15<br>F26 footwear collaboration</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2502_012_4-5.jpg" alt="DV NB 1080v15 3">
+          <figcaption>District Vision New Balance 1080v15<br>F26 footwear collaboration</figcaption>
+        </figure>
+        <figure>
+          <img src="images/037_2202_003_4-5.jpg" alt="Zuriga T2 1">
+          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
+        </figure>
+        <figure>
+          <img src="images/037_2202_009_4-5.jpg" alt="Zuriga T2 2">
+          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
+        </figure>
+        <figure>
+          <img src="images/037_2202_007_4-5.jpg" alt="Zuriga T2 3">
+          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
+        </figure>
+		<figure>
+          <img src="images/037_2202_003_4-5.jpg" alt="Zuriga T2 1">
+          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
+        </figure>
+        <figure>
+          <img src="images/037_2202_009_4-5.jpg" alt="Zuriga T2 2">
+          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
+        </figure>
+        <figure>
+          <img src="images/037_2202_007_4-5.jpg" alt="Zuriga T2 3">
+          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
+        </figure>        
+        <figure>
+          <img src="images/012_2503_001_4-5.jpg" alt="DV NB Glove">
+          <figcaption>District Vision New Balance <br>F26 glove with watch face window</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2402_007_4-5.jpg" alt="DV NB SC Elite v5 1">
+          <figcaption>District Vision New Balance Sc Elite v5<br>S26 footwear collaboration</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2402_013_4-5.jpg" alt="DV NB SC Elite v5 2">
+          <figcaption>District Vision New Balance Sc Elite v5<br>S26 footwear collaboration</figcaption>
+        </figure>
+        <figure>
+          <img src="images/037_2202_015%204-5.jpg" alt="Zuriga T2 espresso machine">
+          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
+        </figure>
+        <figure>
+          <img src="images/037_2202_015%204-5.jpg" alt="Zuriga T2 espresso machine">
+          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
+        </figure>
+        <figure>
+          <img src="images/037_2202_015%204-5.jpg" alt="Zuriga T2 espresso machine">
+          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
+        </figure>
+      </div>
+</main>
+
+  <footer class="site-footer">
+    <p>Copyright © 2026 Solá Solá Studios GmbH.
+    <br>Images and brand names are the property of their respective owners. <a href="https://www.solasolastudios.com/credits" target="_blank" rel="noopener">Credits</a>
+    <br>Rigistrasse 2, 8006 Zürich, Switzerland
+    <br>CHE-430.270.397</p>
+  </footer>
+
+</body>
+</html>
