@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Solá Solá Studios, GmbH</title>
-  <link rel="stylesheet" href="https://use.typekit.net/qhi0kqh.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #f9f8f5;     /* page background */
@@ -36,12 +38,12 @@
       color: var(--muted);
     }
 
-    /* This applies Code Saver (Adobe Fonts) to all text on the page */
+    /* This applies Inconsolata to all text on the page */
     body {
       margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font-family: "code-saver", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-family: "Inconsolata", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
       line-height: 1.5;
     }
 
@@ -57,7 +59,7 @@
     .brand {
       position: relative;
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       font-weight: 500;
       line-height: 1.2;
     }
@@ -73,7 +75,7 @@
     main p {
       margin: 0 0 1.25rem;
       font-weight: 400;
-      font-size: .8rem;
+      font-size: .95rem;
       line-height: 1.15;
     }
 
@@ -88,6 +90,11 @@
     main .statement,
     main .contacts {
       margin-bottom: calc(1.15em + 1.25rem);
+    }
+
+    /* Select Clients sits below the images: same gap above as between the text and the images */
+    main .clients {
+      margin: calc(2 * var(--section-gap)) 0 0;
     }
 
     /* Names in the main text: same size as the main text, bold */
@@ -121,7 +128,7 @@
 
     figcaption {
       text-align: left;
-      font-size: .6rem;
+      font-size: .72rem;
       line-height: 1.15;
     }
 
@@ -140,8 +147,7 @@
       margin: 0;
     }
 
-    /* Mobile: all 12 images stay, one per row, in order 1 1 1 / 2 2 2 / 3 3 3 / 4 4 4.
-       Each image keeps its caption below. */
+    /* Mobile: one image per row, in gallery order. A caption (when there is one) sits below its image. */
     @media (max-width: 40rem) {
       .person {
         grid-template-columns: 1fr;
@@ -164,7 +170,7 @@
       padding: 0 var(--gutter) 3rem;
       text-align: left;
       color: var(--ink);
-      font-size: .8rem;
+      font-size: .95rem;
       line-height: 1.15;
     }
 
@@ -187,7 +193,7 @@
       /* Mobile: header lines never wrap; the text shrinks on very narrow screens */
       .brand {
         white-space: nowrap;
-        font-size: min(1.2rem, calc((100vw - 2 * var(--gutter)) / 12));
+        font-size: min(1.4rem, calc((100vw - 2 * var(--gutter)) / 12));
       }
     }
   </style>
@@ -204,15 +210,296 @@
     <br>Co-Founder, Principal Industrial Designer
     <br><a href="mailto:kyle@solasolastudios.com">kyle@solasolastudios.com</a>
     <br><a href="http://www.instagram.com/solaequipment" target="_blank" rel="noopener">@solaequipment</a>
-    <br><a href="http://www.solasolastudios.com/kyle" target="_blank" rel="noopener">about</a>
     <br>
     <br><strong>Isabell Solá</strong>
     <br>Co-Founder
-    <br>Current: Director of Footwear Design, Performance All Day, On AG
-    <br><a href="mailto:isabell@solasolastudios.com">isabell@solasolastudios.com</a>
-    <br><a href="http://www.solasolastudios.com/isabell" target="_blank" rel="noopener">about</a></p>
+    <br>Current: Director of Footwear Design, Lifestyle, On AG
+    <br><a href="mailto:isabell@solasolastudios.com">isabell@solasolastudios.com</a></p>
 
-    <p><strong>Select Clients</strong>
+      <div class="person">
+        <figure>
+          <img src="images/037_2202_005_4-5.jpg" alt="037_2202_005_4-5">
+          <figcaption>Zuriga T2 coffee machine<br>industrial Design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/037_2202_007_4-5.jpg" alt="037_2202_007_4-5">
+          <figcaption>Zuriga T2 coffee machine<br>industrial Design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/037_2202_003_4-5.jpg" alt="037_2202_003_4-5">
+          <figcaption>Zuriga T2 coffee machine<br>industrial Design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2502_004_4-5.jpg" alt="012_2502_004_4-5">
+          <figcaption>District Vision New Balance 1080v15<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2502_009_4-5.jpg" alt="012_2502_009_4-5">
+          <figcaption>District Vision New Balance 1080v15<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2504_001_4-5.jpg" alt="012_2504_001_4-5">
+          <figcaption>District Vision New Balance run glove<br>industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/001_1901_012_4-5.jpg" alt="001_1901_012_4-5">
+          <figcaption>THEM Skates mod.909<br>industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/001_1901_022_4-5.png" alt="001_1901_022_4-5">
+          <figcaption>THEM Skates mod.909<br>industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/001_1901_023_4-5.png" alt="001_1901_023_4-5">
+          <figcaption>THEM Skates mod.909<br>industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2402_013_4-5.jpg" alt="012_2402_013_4-5">
+          <figcaption>District Vision New Balance SC Elite v5<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2402_007_4-5.jpg" alt="012_2402_007_4-5">
+          <figcaption>District Vision New Balance SC Elite v5<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2402_009_4-5.jpg" alt="012_2402_009_4-5">
+          <figcaption>District Vision New Balance SC Elite v5<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2401_001.png" alt="012_2401_001">
+          <figcaption>District Vision New Balance MT10o<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2401_008_4-5.png" alt="012_2401_008_4-5">
+          <figcaption>District Vision New Balance MT10o<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2401_018_4-5.jpg" alt="012_2401_018_4-5">
+          <figcaption>District Vision New Balance MT10o<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_054_4-5.png" alt="036_000_054_4-5">
+          <figcaption>VIU - 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_008_4-5.jpg" alt="036_000_008_4-5">
+          <figcaption>VIU - 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_021_4-5.jpg" alt="036_000_021_4-5">
+          <figcaption>VIU - 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_063_4-5.jpg" alt="036_000_063_4-5">
+          <figcaption>VIU - 3D printed, made-to-order eyewear<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_069_4-5.jpg" alt="036_000_069_4-5">
+          <figcaption>VIU - 3D printed, made-to-order eyewear<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_071_4-5.jpg" alt="036_000_071_4-5">
+          <figcaption>VIU - 3D printed, made-to-order eyewear<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_076_4-5.jpg" alt="036_000_076_4-5">
+          <figcaption>VIU - The Adventurer - 3D printed<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_079_4-5.jpg" alt="036_000_079_4-5">
+          <figcaption>VIU - The Adventurer - 3D printed<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_077_4-5.jpg" alt="036_000_077_4-5">
+          <figcaption>VIU - The Adventurer - 3D printed<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_074_4-5.jpg" alt="036_000_074_4-5">
+          <figcaption>VIU - The Adventurer RX - 3D printed<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_055_4-5.png" alt="036_000_055_4-5">
+          <figcaption>VIU - The Adventurer RX - 3D printed<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_014_4-5.jpg" alt="036_000_014_4-5">
+          <figcaption>VIU - The Adventurer RX - 3D printed<br>concept, industrial design and product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_086_4-5.jpg" alt="036_000_086_4-5">
+          <figcaption>VIU - The Sprint - 3D printed sport eyewear<br>concept, industrial design, product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_084_4-5.jpg" alt="036_000_084_4-5">
+          <figcaption>VIU - The Chase - 3D printed sport eyewear<br>concept, industrial design, product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_087_4-5.jpg" alt="036_000_087_4-5">
+          <figcaption>VIU - The Dart - 3D printed sport eyewear<br>concept, industrial design, product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2302_024_4-5.jpg" alt="012_2302_024_4-5">
+          <figcaption>District Vision New Balance Hierro v8<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2302_017_4-5.jpg" alt="012_2302_017_4-5">
+          <figcaption>District Vision New Balance Hierro v8<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2302_022_4-5.jpg" alt="012_2302_022_4-5">
+          <figcaption>District Vision New Balance Hierro v8<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2209_003_4-5.jpg" alt="012_2209_003_4-5">
+          <figcaption>District Vision Gravel Bike<br>pack system design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2209_005_4-5.jpg" alt="012_2209_005_4-5">
+          <figcaption>District Vision Gravel Bike<br>pack system design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2106_001_4-5.png" alt="012_2106_001_4-5">
+          <figcaption>District Vision - dyneema eyewear case<br>industrial design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2108_002_4-5.jpg" alt="012_2108_002_4-5">
+          <figcaption>District Vision New Balance Moretrail<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2108_008_4-5.jpg" alt="012_2108_008_4-5">
+          <figcaption>District Vision New Balance Moretrail<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2108_019_4-5.jpg" alt="012_2108_019_4-5">
+          <figcaption>District Vision New Balance Moretrail<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2108_031_4-5.jpg" alt="012_2108_031_4-5">
+          <figcaption>District Vision New Balance SC Elite<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2108_035_4-5.jpg" alt="012_2108_035_4-5">
+          <figcaption>District Vision New Balance SC Elite<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2108_045_4-5.jpg" alt="012_2108_045_4-5">
+          <figcaption>District Vision New Balance SC Elite<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2006_035_4-5.jpg" alt="012_2006_035_4-5">
+          <figcaption>District Vision New Balance RC Elite<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2006_014_4-5.jpg" alt="012_2006_014_4-5">
+          <figcaption>District Vision New Balance RC Elite<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_2006_038_4-5.png" alt="012_2006_038_4-5">
+          <figcaption>District Vision New Balance RC Elite<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_1701_001_4-5.jpg" alt="012_1701_001_4-5">
+          <figcaption>District Vision Salomon Speedcross<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_1701_006_4-5.jpg" alt="012_1701_006_4-5">
+          <figcaption>District Vision Salomon Speedcross<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_1701_010_4-5.jpg" alt="012_1701_010_4-5">
+          <figcaption>District Vision Salomon Speedcross<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_1601_013_4-5.jpg" alt="012_1601_013_4-5">
+          <figcaption>District Vision silicone eyewear strap<br>concept, industrial design, product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_1601_011_4-5.jpg" alt="012_1601_011_4-5">
+          <figcaption>District Vision silicone eyewear strap<br>concept, industrial design, product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/012_1601_001_4-5.jpg" alt="012_1601_001_4-5">
+          <figcaption>District Vision silicone eyewear strap<br>concept, industrial design, product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/997_1601_001_4-5.jpg" alt="997_1601_001_4-5">
+          <figcaption>Atlas Crafts porcelain vases<br>creative direction, industrial design, product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/997_1601_002_4-5.jpg" alt="997_1601_002_4-5">
+          <figcaption>Atlas Crafts porcelain vases<br>creative direction, industrial design, product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/997_1601_007_4-5.jpg" alt="997_1601_007_4-5">
+          <figcaption>Atlas Crafts porcelain vases<br>creative direction, industrial design, product dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/998_1601_003_4-5.jpg" alt="998_1601_003_4-5">
+          <figcaption>&amp;tradition 721g candle holder<br>concept, industrial design, product dev.<br>licensed design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/998_1601_011_4-5.jpg" alt="998_1601_011_4-5">
+          <figcaption>&amp;tradition 721g candle holder<br>concept, industrial design, product dev.<br>licensed design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/998_1601_001_4-5.jpg" alt="998_1601_001_4-5">
+          <figcaption>&amp;tradition 721g candle holder<br>concept, industrial design, product dev.<br>licensed design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/999_2202_004_4-5.jpg" alt="999_2202_004_4-5">
+          <figcaption>Plantahof fountain<br>concept, industrial design, dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/999_2202_003_4-5.jpg" alt="999_2202_003_4-5">
+          <figcaption>Plantahof fountain<br>concept, industrial design, dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/999_2202_002_4-5.jpg" alt="999_2202_002_4-5">
+          <figcaption>Plantahof fountain<br>concept, industrial design, dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/998_1802_002_4-5.jpg" alt="998_1802_002_4-5">
+          <figcaption>Karakter DSWM shelf<br>concept, industrial design, product dev.<br>licensed design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/998_1802_003_4-5.jpg" alt="998_1802_003_4-5">
+          <figcaption>Karakter DSWM shelf<br>concept, industrial design, product dev.<br>licensed design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/998_1802_001_4-5.jpg" alt="998_1802_001_4-5">
+          <figcaption>Karakter DSWM shelf<br>concept, industrial design, product dev.<br>licensed design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/999_2201_001_4-5.jpg" alt="999_2201_001_4-5">
+          <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
+        </figure>
+        <figure>
+          <img src="images/999_2201_002_4-5.jpg" alt="999_2201_002_4-5">
+          <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
+        </figure>
+        <figure>
+          <img src="images/999_2201_003_4-5.jpg" alt="999_2201_003_4-5">
+          <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
+        </figure>
+        <figure>
+          <img src="images/009_1702_005_4-5.jpg" alt="009_1702_005_4-5">
+          <figcaption>Riedel Louis crystal glassware<br>concept, industrial design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/009_1702_001_4-5.jpg" alt="009_1702_001_4-5">
+          <figcaption>Riedel Louis crystal glassware<br>concept, industrial design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/009_1702_002_4-5.jpg" alt="009_1702_002_4-5">
+          <figcaption>Riedel Louis crystal glassware<br>concept, industrial design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/002_1501_003_4-5.jpg" alt="002_1501_003_4-5">
+          <figcaption>Hickies modular lacing system<br>industrial design, product dev.</figcaption>
+        </figure>
+      </div>
+
+    <p class="clients"><strong>Select Clients</strong>
     <br>Arc’teryx
     <br>Atlas Crafts
     <br>Black Yak
@@ -221,7 +508,7 @@
     <br>District Vision + Salomon
     <br>Engelbert Strauss
     <br>Intuition
-    <br>Kanton Graubunden
+    <br>Kanton Graubünden
     <br>Karakter
     <br>Okro Gallery
     <br>On
@@ -235,70 +522,6 @@
     <br>Zig Zag Zurich
     <br>Zuriga
     <br>&amp;tradition</p>
-
-
-      <div class="person">
-        <figure>
-          <img src="images/012_2502_004_4-5.jpg" alt="DV NB 1080v15 1">
-          <figcaption>District Vision New Balance 1080v15<br>F26 footwear collaboration</figcaption>
-        </figure>
-        <figure>
-          <img src="images/012_2502_009_4-5.jpg" alt="DV NB 1080v15 2">
-          <figcaption>District Vision New Balance 1080v15<br>F26 footwear collaboration</figcaption>
-        </figure>
-        <figure>
-          <img src="images/012_2502_012_4-5.jpg" alt="DV NB 1080v15 3">
-          <figcaption>District Vision New Balance 1080v15<br>F26 footwear collaboration</figcaption>
-        </figure>
-        <figure>
-          <img src="images/037_2202_003_4-5.jpg" alt="Zuriga T2 1">
-          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
-        </figure>
-        <figure>
-          <img src="images/037_2202_009_4-5.jpg" alt="Zuriga T2 2">
-          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
-        </figure>
-        <figure>
-          <img src="images/037_2202_007_4-5.jpg" alt="Zuriga T2 3">
-          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
-        </figure>
-		<figure>
-          <img src="images/037_2202_003_4-5.jpg" alt="Zuriga T2 1">
-          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
-        </figure>
-        <figure>
-          <img src="images/037_2202_009_4-5.jpg" alt="Zuriga T2 2">
-          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
-        </figure>
-        <figure>
-          <img src="images/037_2202_007_4-5.jpg" alt="Zuriga T2 3">
-          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
-        </figure>        
-        <figure>
-          <img src="images/012_2503_001_4-5.jpg" alt="DV NB Glove">
-          <figcaption>District Vision New Balance <br>F26 glove with watch face window</figcaption>
-        </figure>
-        <figure>
-          <img src="images/012_2402_007_4-5.jpg" alt="DV NB SC Elite v5 1">
-          <figcaption>District Vision New Balance Sc Elite v5<br>S26 footwear collaboration</figcaption>
-        </figure>
-        <figure>
-          <img src="images/012_2402_013_4-5.jpg" alt="DV NB SC Elite v5 2">
-          <figcaption>District Vision New Balance Sc Elite v5<br>S26 footwear collaboration</figcaption>
-        </figure>
-        <figure>
-          <img src="images/037_2202_015%204-5.jpg" alt="Zuriga T2 espresso machine">
-          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
-        </figure>
-        <figure>
-          <img src="images/037_2202_015%204-5.jpg" alt="Zuriga T2 espresso machine">
-          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
-        </figure>
-        <figure>
-          <img src="images/037_2202_015%204-5.jpg" alt="Zuriga T2 espresso machine">
-          <figcaption>Zuriga<br>T2 espresso machine</figcaption>
-        </figure>
-      </div>
 </main>
 
   <footer class="site-footer">
