@@ -83,7 +83,7 @@
        (It is larger than the paragraph's bottom margin, so the two margins
        collapse into exactly this value.) */
     .person {
-      margin-top: calc(2 * var(--section-gap));
+      margin-top: 0;
     }
 
     /* Studio statement and contacts: the same gap (one blank line plus paragraph spacing) before the next block */
@@ -92,9 +92,14 @@
       margin-bottom: calc(1.15em + 1.25rem);
     }
 
+    /* Names and info sit below the gallery: the usual image-to-text gap above them */
+    main .contacts {
+      margin-top: calc(2 * var(--section-gap));
+    }
+
     /* Select Clients sits below the images: same gap above as between the text and the images */
     main .clients {
-      margin: calc(2 * var(--section-gap)) 0 0;
+      margin: 0;
     }
 
     /* Names in the main text: same size as the main text, bold */
@@ -206,16 +211,6 @@
   <main>
     <p class="statement"><strong>Resolving complex requirements with poetic simplicity.</strong></p>
 
-    <p class="contacts"><strong>Kyle Solá</strong>
-    <br>Co-Founder, Principal Industrial Designer
-    <br><a href="mailto:kyle@solasolastudios.com">kyle@solasolastudios.com</a>
-    <br><a href="http://www.instagram.com/kylesola" target="_blank" rel="noopener">@kylesola</a>
-    <br>
-    <br><strong>Isabell Solá</strong>
-    <br>Co-Founder
-    <br>Current: Director of Footwear Design, Lifestyle, On AG
-    <br><a href="mailto:isabell@solasolastudios.com">isabell@solasolastudios.com</a></p>
-
       <div class="person">
         <figure>
           <img src="images/012_2503_062.jpg" alt="012_2503_062">
@@ -242,6 +237,26 @@
           <figcaption>Zuriga T2 coffee machine<br>industrial Design<br>photo: Conrad von Schubert</figcaption>
         </figure>
         <figure>
+          <img src="images/999_2201_001_4-5.jpg" alt="999_2201_001_4-5">
+          <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
+        </figure>
+        <figure>
+          <img src="images/999_2201_002_4-5.jpg" alt="999_2201_002_4-5">
+          <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
+        </figure>
+        <figure>
+          <img src="images/999_2201_003_4-5.jpg" alt="999_2201_003_4-5">
+          <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
+        </figure>
+        <figure>
+          <img src="images/001_1901_012_4-5.jpg" alt="001_1901_012_4-5">
+          <figcaption>THEM Skates mod.909<br>industrial design and product dev.<br>photo: Brandon Smith and Jeff Stockwell</figcaption>
+        </figure>
+        <figure>
+          <img src="images/001_1901_022_4-5.png" alt="001_1901_022_4-5">
+          <figcaption>THEM Skates mod.909<br>industrial design and product dev.<br>photo: Brandon Smith and Jeff Stockwell</figcaption>
+        </figure>
+        <figure>
           <img src="images/012_2502_004_4-5.jpg" alt="012_2502_004_4-5">
           <figcaption>District Vision New Balance 1080v15<br>collaboration design</figcaption>
         </figure>
@@ -254,18 +269,6 @@
           <figcaption>District Vision New Balance run glove<br>industrial design and product dev.</figcaption>
         </figure>
         <figure>
-          <img src="images/001_1901_012_4-5.jpg" alt="001_1901_012_4-5">
-          <figcaption>THEM Skates mod.909<br>industrial design and product dev.<br>photo: Brandon Smith and Jeff Stockwell</figcaption>
-        </figure>
-        <figure>
-          <img src="images/001_1901_022_4-5.png" alt="001_1901_022_4-5">
-          <figcaption>THEM Skates mod.909<br>industrial design and product dev.<br>photo: Brandon Smith and Jeff Stockwell</figcaption>
-        </figure>
-        <figure>
-          <img src="images/001_1901_023_4-5.png" alt="001_1901_023_4-5">
-          <figcaption>THEM Skates mod.909<br>industrial design and product dev.<br>photo: Brandon Smith and Jeff Stockwell</figcaption>
-        </figure>
-        <figure>
           <img src="images/012_2402_013_4-5.jpg" alt="012_2402_013_4-5">
           <figcaption>District Vision New Balance SC Elite v5<br>collaboration design</figcaption>
         </figure>
@@ -276,6 +279,18 @@
         <figure>
           <img src="images/012_2402_009_4-5.jpg" alt="012_2402_009_4-5">
           <figcaption>District Vision New Balance SC Elite v5<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_074_4-5.jpg" alt="036_000_074_4-5">
+          <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_055_4-5.png" alt="036_000_055_4-5">
+          <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_014_4-5.jpg" alt="036_000_014_4-5">
+          <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
         </figure>
         <figure>
           <img src="images/012_2401_001.png" alt="012_2401_001">
@@ -291,63 +306,51 @@
         </figure>
         <figure>
           <img src="images/036_000_054_4-5.png" alt="036_000_054_4-5">
-          <figcaption>VIU - 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+          <figcaption>VIU 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
         </figure>
         <figure>
           <img src="images/036_000_008_4-5.jpg" alt="036_000_008_4-5">
-          <figcaption>VIU - 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+          <figcaption>VIU 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
         </figure>
         <figure>
           <img src="images/036_000_021_4-5.jpg" alt="036_000_021_4-5">
-          <figcaption>VIU - 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+          <figcaption>VIU 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+        </figure>
+        <figure>
+          <img src="images/999_2202_004_4-5.jpg" alt="999_2202_004_4-5">
+          <figcaption>Plantahof fountain<br>concept model<br>photo: Nadine Ottawa</figcaption>
+        </figure>
+        <figure>
+          <img src="images/999_2202_003_4-5.jpg" alt="999_2202_003_4-5">
+          <figcaption>Plantahof fountain<br>concept, industrial design, dev.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/999_2202_002_4-5.jpg" alt="999_2202_002_4-5">
+          <figcaption>Plantahof fountain<br>concept, industrial design, dev.</figcaption>
         </figure>
         <figure>
           <img src="images/036_000_063_4-5.jpg" alt="036_000_063_4-5">
-          <figcaption>VIU - 3D printed, made-to-order eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+          <figcaption>VIU 3D printed, made-to-order eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
         </figure>
         <figure>
           <img src="images/036_000_069_4-5.jpg" alt="036_000_069_4-5">
-          <figcaption>VIU - 3D printed, made-to-order eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+          <figcaption>VIU 3D printed, made-to-order eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
         </figure>
         <figure>
           <img src="images/036_000_071_4-5.jpg" alt="036_000_071_4-5">
-          <figcaption>VIU - 3D printed, made-to-order eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+          <figcaption>VIU 3D printed, made-to-order eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
         </figure>
         <figure>
           <img src="images/036_000_076_4-5.jpg" alt="036_000_076_4-5">
-          <figcaption>VIU - The Adventurer - 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+          <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
         </figure>
         <figure>
           <img src="images/036_000_079_4-5.jpg" alt="036_000_079_4-5">
-          <figcaption>VIU - The Adventurer - 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_077_4-5.jpg" alt="036_000_077_4-5">
-          <figcaption>VIU - The Adventurer - 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_074_4-5.jpg" alt="036_000_074_4-5">
-          <figcaption>VIU - The Adventurer RX - 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_055_4-5.png" alt="036_000_055_4-5">
-          <figcaption>VIU - The Adventurer RX - 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_014_4-5.jpg" alt="036_000_014_4-5">
-          <figcaption>VIU - The Adventurer RX - 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_086_4-5.jpg" alt="036_000_086_4-5">
-          <figcaption>VIU - The Sprint - 3D printed sport eyewear<br>concept, industrial design, product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_084_4-5.jpg" alt="036_000_084_4-5">
-          <figcaption>VIU - The Chase - 3D printed sport eyewear<br>concept, industrial design, product dev.<br>photo: Sandra Kennel</figcaption>
+          <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
         </figure>
         <figure>
           <img src="images/036_000_087_4-5.jpg" alt="036_000_087_4-5">
-          <figcaption>VIU - The Dart - 3D printed sport eyewear<br>concept, industrial design, product dev.<br>photo: Sandra Kennel</figcaption>
+          <figcaption>VIU 3D printed sport eyewear<br>concept, industrial design, product dev.<br>photo: Sandra Kennel</figcaption>
         </figure>
         <figure>
           <img src="images/012_2302_024_4-5.jpg" alt="012_2302_024_4-5">
@@ -384,6 +387,18 @@
         <figure>
           <img src="images/012_2108_019_4-5.jpg" alt="012_2108_019_4-5">
           <figcaption>District Vision New Balance Moretrail<br>collaboration design</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_077_4-5.jpg" alt="036_000_077_4-5">
+          <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_086_4-5.jpg" alt="036_000_086_4-5">
+          <figcaption>VIU 3D printed sport eyewear<br>concept, industrial design, product dev.<br>photo: Sandra Kennel</figcaption>
+        </figure>
+        <figure>
+          <img src="images/036_000_084_4-5.jpg" alt="036_000_084_4-5">
+          <figcaption>VIU 3D printed sport eyewear<br>concept, industrial design, product dev.<br>photo: Sandra Kennel</figcaption>
         </figure>
         <figure>
           <img src="images/012_2108_031_4-5.jpg" alt="012_2108_031_4-5">
@@ -458,18 +473,6 @@
           <figcaption>&amp;tradition 721g candle holder<br>concept, industrial design, product dev.<br>licensed design</figcaption>
         </figure>
         <figure>
-          <img src="images/999_2202_004_4-5.jpg" alt="999_2202_004_4-5">
-          <figcaption>Plantahof fountain<br>concept model<br>photo: Nadine Ottawa</figcaption>
-        </figure>
-        <figure>
-          <img src="images/999_2202_003_4-5.jpg" alt="999_2202_003_4-5">
-          <figcaption>Plantahof fountain<br>concept, industrial design, dev.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/999_2202_002_4-5.jpg" alt="999_2202_002_4-5">
-          <figcaption>Plantahof fountain<br>concept, industrial design, dev.</figcaption>
-        </figure>
-        <figure>
           <img src="images/998_1802_002_4-5.jpg" alt="998_1802_002_4-5">
           <figcaption>Karakter DSWM shelf<br>concept, industrial design, product dev.<br>licensed design</figcaption>
         </figure>
@@ -480,18 +483,6 @@
         <figure>
           <img src="images/998_1802_001_4-5.jpg" alt="998_1802_001_4-5">
           <figcaption>Karakter DSWM shelf<br>concept, industrial design, product dev.<br>licensed design</figcaption>
-        </figure>
-        <figure>
-          <img src="images/999_2201_001_4-5.jpg" alt="999_2201_001_4-5">
-          <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
-        </figure>
-        <figure>
-          <img src="images/999_2201_002_4-5.jpg" alt="999_2201_002_4-5">
-          <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
-        </figure>
-        <figure>
-          <img src="images/999_2201_003_4-5.jpg" alt="999_2201_003_4-5">
-          <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
         </figure>
         <figure>
           <img src="images/009_1702_005_4-5.jpg" alt="009_1702_005_4-5">
@@ -510,6 +501,16 @@
           <figcaption>Hickies modular lacing system<br>industrial design, product dev.</figcaption>
         </figure>
       </div>
+
+    <p class="contacts"><strong>Kyle Solá</strong>
+    <br>Co-Founder, Principal Industrial Designer
+    <br><a href="mailto:kyle@solasolastudios.com">kyle@solasolastudios.com</a>
+    <br><a href="http://www.instagram.com/solaequipment" target="_blank" rel="noopener">@solaequipment</a>
+    <br>
+    <br><strong>Isabell Solá</strong>
+    <br>Co-Founder
+    <br>Current: Director of Footwear Design, Lifestyle, On AG
+    <br><a href="mailto:isabell@solasolastudios.com">isabell@solasolastudios.com</a></p>
 
     <p class="clients"><strong>Select Clients</strong>
     <br>Arc’teryx
