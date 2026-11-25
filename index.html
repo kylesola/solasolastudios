@@ -138,12 +138,12 @@
     }
 
 
-    /* Desktop: three images across, each with its own caption beneath */
+    /* Draft layout: each project is a group with its caption above, then three images across (desktop)
+       or one per row (mobile). */
     .person {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem 1.5rem;
-      align-items: start;
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
     .person figure {
@@ -152,10 +152,25 @@
       margin: 0;
     }
 
-    /* Mobile: one image per row, in gallery order. A caption (when there is one) sits below its image. */
+    .person figcaption {
+      margin-bottom: .5rem;
+    }
+
+    .group-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .group-images img {
+      margin: 0;
+    }
+
     @media (max-width: 40rem) {
-      .person {
+      .group-images {
         grid-template-columns: 1fr;
+        gap: 1rem;
       }
     }
 
@@ -212,144 +227,100 @@
     <p class="statement"><strong>Resolving complex requirements with poetic simplicity.</strong></p>
 
       <div class="person">
-        <figure>
-          <img fetchpriority="high" src="images/012_2503_062.jpg" alt="012_2503_062">
+        <figure class="group">
           <figcaption>District Vision New Balance Magnetic Blade<br>concept, industrial design, prototype, athlete testing</figcaption>
+          <div class="group-images">
+            <img fetchpriority="high" src="images/012_2503_062.jpg" alt="012_2503_062">
+            <img src="images/012_2503_061.jpg" alt="012_2503_061">
+            <img src="images/012_2503_068.jpg" alt="012_2503_068">
+          </div>
         </figure>
-        <figure>
-          <img src="images/012_2503_061.jpg" alt="012_2503_061">
-          <figcaption>District Vision New Balance Magnetic Blade<br>concept, industrial design, prototype, athlete testing</figcaption>
-        </figure>
-        <figure>
-          <img src="images/012_2503_068.jpg" alt="012_2503_068">
-          <figcaption>District Vision New Balance Magnetic Blade<br>concept, industrial design, prototype, athlete testing<br>Photo of Sam Parsons by Max Vallot</figcaption>
-        </figure>
-        <figure>
-          <img src="images/037_2202_005_4-5.jpg" alt="037_2202_005_4-5" loading="lazy" decoding="async">
+        <figure class="group">
           <figcaption>Zuriga T2 coffee machine<br>industrial Design<br>photo: Conrad von Schubert</figcaption>
+          <div class="group-images">
+            <img src="images/037_2202_005_4-5.jpg" alt="037_2202_005_4-5" loading="lazy" decoding="async">
+            <img src="images/037_2202_007_4-5.jpg" alt="037_2202_007_4-5" loading="lazy" decoding="async">
+            <img src="images/037_2202_003_4-5.jpg" alt="037_2202_003_4-5" loading="lazy" decoding="async">
+          </div>
         </figure>
-        <figure>
-          <img src="images/037_2202_007_4-5.jpg" alt="037_2202_007_4-5" loading="lazy" decoding="async">
-          <figcaption>Zuriga T2 coffee machine<br>industrial Design<br>photo: Conrad von Schubert</figcaption>
-        </figure>
-        <figure>
-          <img src="images/037_2202_003_4-5.jpg" alt="037_2202_003_4-5" loading="lazy" decoding="async">
-          <figcaption>Zuriga T2 coffee machine<br>industrial Design<br>photo: Conrad von Schubert</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_063_4-5.jpg" alt="036_000_063_4-5" loading="lazy" decoding="async">
+        <figure class="group">
           <figcaption>VIU Archetypes collection<br>3D printed, made-to-order eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+          <div class="group-images">
+            <img src="images/036_000_063_4-5.jpg" alt="036_000_063_4-5" loading="lazy" decoding="async">
+            <img src="images/036_000_069_4-5.jpg" alt="036_000_069_4-5" loading="lazy" decoding="async">
+            <img src="images/036_000_071_4-5.jpg" alt="036_000_071_4-5" loading="lazy" decoding="async">
+          </div>
         </figure>
-        <figure>
-          <img src="images/036_000_069_4-5.jpg" alt="036_000_069_4-5" loading="lazy" decoding="async">
-          <figcaption>VIU Archetypes collection<br>3D printed, made-to-order eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_071_4-5.jpg" alt="036_000_071_4-5" loading="lazy" decoding="async">
-          <figcaption>VIU Archetypes collection<br>3D printed, made-to-order eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/001_1901_016_4-5.jpg" alt="001_1901_016_4-5" loading="lazy" decoding="async">
+        <figure class="group">
           <figcaption>THEM 909 inline street skate<br>industrial design and product dev.<br>photo: Brandon Smith and Jeff Stockwell</figcaption>
+          <div class="group-images">
+            <img src="images/001_1901_016_4-5.jpg" alt="001_1901_016_4-5" loading="lazy" decoding="async">
+            <img src="images/001_1901_038_4-5.png" alt="001_1901_038_4-5" loading="lazy" decoding="async">
+            <img src="images/001_1901_015_4-5.jpg" alt="001_1901_015_4-5" loading="lazy" decoding="async">
+          </div>
         </figure>
-        <figure>
-          <img src="images/001_1901_038_4-5.png" alt="001_1901_038_4-5" loading="lazy" decoding="async">
-          <figcaption>THEM 909 inline street skate<br>industrial design and product dev.<br>photo: Brandon Smith and Jeff Stockwell</figcaption>
-        </figure>
-        <figure>
-          <img src="images/001_1901_015_4-5.jpg" alt="001_1901_015_4-5" loading="lazy" decoding="async">
-          <figcaption>THEM 909 inline street skate<br>industrial design and product dev.<br>photo: Brandon Smith and Jeff Stockwell</figcaption>
-        </figure>
-        <figure>
-          <img src="images/999_2201_003_4-5.jpg" alt="999_2201_003_4-5" loading="lazy" decoding="async">
+        <figure class="group">
           <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
+          <div class="group-images">
+            <img src="images/999_2201_003_4-5.jpg" alt="999_2201_003_4-5" loading="lazy" decoding="async">
+            <img src="images/999_2201_001_4-5.jpg" alt="999_2201_001_4-5" loading="lazy" decoding="async">
+            <img src="images/999_2201_002_4-5.jpg" alt="999_2201_002_4-5" loading="lazy" decoding="async">
+          </div>
         </figure>
-        <figure>
-          <img src="images/999_2201_001_4-5.jpg" alt="999_2201_001_4-5" loading="lazy" decoding="async">
-          <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
-        </figure>
-        <figure>
-          <img src="images/999_2201_002_4-5.jpg" alt="999_2201_002_4-5" loading="lazy" decoding="async">
-          <figcaption>Sola Sola Studios light sculpture<br>concept and manufacture</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_084_4-5.jpg" alt="036_000_084_4-5" loading="lazy" decoding="async">
+        <figure class="group">
           <figcaption>VIU 3D printed sport eyewear<br>concept, industrial design, product dev.<br>photo: Sandra Kennel</figcaption>
+          <div class="group-images">
+            <img src="images/036_000_084_4-5.jpg" alt="036_000_084_4-5" loading="lazy" decoding="async">
+            <img src="images/036_000_086_4-5.jpg" alt="036_000_086_4-5" loading="lazy" decoding="async">
+            <img src="images/036_000_087_4-5.jpg" alt="036_000_087_4-5" loading="lazy" decoding="async">
+          </div>
         </figure>
-        <figure>
-          <img src="images/036_000_086_4-5.jpg" alt="036_000_086_4-5" loading="lazy" decoding="async">
-          <figcaption>VIU 3D printed sport eyewear<br>concept, industrial design, product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_087_4-5.jpg" alt="036_000_087_4-5" loading="lazy" decoding="async">
-          <figcaption>VIU 3D printed sport eyewear<br>concept, industrial design, product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_074_4-5.jpg" alt="036_000_074_4-5" loading="lazy" decoding="async">
+        <figure class="group">
           <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+          <div class="group-images">
+            <img src="images/036_000_074_4-5.jpg" alt="036_000_074_4-5" loading="lazy" decoding="async">
+            <img src="images/036_000_055_4-5.png" alt="036_000_055_4-5" loading="lazy" decoding="async">
+            <img src="images/036_000_014_4-5.jpg" alt="036_000_014_4-5" loading="lazy" decoding="async">
+          </div>
         </figure>
-        <figure>
-          <img src="images/036_000_055_4-5.png" alt="036_000_055_4-5" loading="lazy" decoding="async">
-          <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_014_4-5.jpg" alt="036_000_014_4-5" loading="lazy" decoding="async">
-          <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_054_4-5.png" alt="036_000_054_4-5" loading="lazy" decoding="async">
+        <figure class="group">
           <figcaption>VIU 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
+          <div class="group-images">
+            <img src="images/036_000_054_4-5.png" alt="036_000_054_4-5" loading="lazy" decoding="async">
+            <img src="images/036_000_008_4-5.jpg" alt="036_000_008_4-5" loading="lazy" decoding="async">
+            <img src="images/036_000_021_4-5.jpg" alt="036_000_021_4-5" loading="lazy" decoding="async">
+          </div>
         </figure>
-        <figure>
-          <img src="images/036_000_008_4-5.jpg" alt="036_000_008_4-5" loading="lazy" decoding="async">
-          <figcaption>VIU 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_021_4-5.jpg" alt="036_000_021_4-5" loading="lazy" decoding="async">
-          <figcaption>VIU 3D printed + beta titanium eyewear<br>concept, industrial design and product dev.<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/999_2202_004_4-5.jpg" alt="999_2202_004_4-5" loading="lazy" decoding="async">
+        <figure class="group">
           <figcaption>Plantahof fountain<br>concept model<br>photo: Nadine Ottawa</figcaption>
+          <div class="group-images">
+            <img src="images/999_2202_004_4-5.jpg" alt="999_2202_004_4-5" loading="lazy" decoding="async">
+            <img src="images/999_2202_003_4-5.jpg" alt="999_2202_003_4-5" loading="lazy" decoding="async">
+            <img src="images/999_2202_002_4-5.jpg" alt="999_2202_002_4-5" loading="lazy" decoding="async">
+          </div>
         </figure>
-        <figure>
-          <img src="images/999_2202_003_4-5.jpg" alt="999_2202_003_4-5" loading="lazy" decoding="async">
-          <figcaption>Plantahof fountain<br>concept, industrial design, dev.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/999_2202_002_4-5.jpg" alt="999_2202_002_4-5" loading="lazy" decoding="async">
-          <figcaption>Plantahof fountain<br>concept, industrial design, dev.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_076_4-5.jpg" alt="036_000_076_4-5" loading="lazy" decoding="async">
+        <figure class="group">
           <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev. with Andras Markus<br>photo: Sandra Kennel</figcaption>
+          <div class="group-images">
+            <img src="images/036_000_076_4-5.jpg" alt="036_000_076_4-5" loading="lazy" decoding="async">
+            <img src="images/036_000_079_4-5.jpg" alt="036_000_079_4-5" loading="lazy" decoding="async">
+            <img src="images/036_000_077_4-5.jpg" alt="036_000_077_4-5" loading="lazy" decoding="async">
+          </div>
         </figure>
-        <figure>
-          <img src="images/036_000_079_4-5.jpg" alt="036_000_079_4-5" loading="lazy" decoding="async">
-          <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev. with Andras Markus<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/036_000_077_4-5.jpg" alt="036_000_077_4-5" loading="lazy" decoding="async">
-          <figcaption>VIU The Adventurer 3D printed<br>concept, industrial design and product dev. with Andras Markus<br>photo: Sandra Kennel</figcaption>
-        </figure>
-        <figure>
-          <img src="images/012_1601_013_4-5.jpg" alt="012_1601_013_4-5" loading="lazy" decoding="async">
+        <figure class="group">
           <figcaption>District Vision silicone eyewear strap<br>concept, industrial design, product dev.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/012_1601_011_4-5.jpg" alt="012_1601_011_4-5" loading="lazy" decoding="async">
-          <figcaption>District Vision silicone eyewear strap<br>concept, industrial design, product dev.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/012_1601_001_4-5.jpg" alt="012_1601_001_4-5" loading="lazy" decoding="async">
-          <figcaption>District Vision silicone eyewear strap<br>concept, industrial design, product dev.</figcaption>
+          <div class="group-images">
+            <img src="images/012_1601_013_4-5.jpg" alt="012_1601_013_4-5" loading="lazy" decoding="async">
+            <img src="images/012_1601_011_4-5.jpg" alt="012_1601_011_4-5" loading="lazy" decoding="async">
+            <img src="images/012_1601_001_4-5.jpg" alt="012_1601_001_4-5" loading="lazy" decoding="async">
+          </div>
         </figure>
       </div>
 
     <p class="contacts"><strong>Kyle Solá</strong>
     <br>Co-Founder, Principal Industrial Designer
     <br><a href="mailto:kyle@solasolastudios.com">kyle@solasolastudios.com</a>
-    <br><a href="http://www.instagram.com/kylesola" target="_blank" rel="noopener">@kylesola</a>
+    <br><a href="http://www.instagram.com/solaequipment" target="_blank" rel="noopener">@solaequipment</a>
     <br>
     <br><strong>Isabell Solá</strong>
     <br>Co-Founder
